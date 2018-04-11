@@ -1,0 +1,26 @@
+{
+  "name": "theme-default",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.css",
+  "scripts": {
+    "build": "rm -rf ./dist && gulp build",
+    "watch": "rm -rf ./dist && gulp watch"
+  },
+  "author": "MIKUScallion@icloud.com",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "gulp-postcss": "^6.3.0",
+    "normalize.css": "^5.0.0",
+    "postcss-css-reset": "^1.0.2",
+    "postcss-cssnext": "^2.10.0",
+    "postcss-inline-svg": "^2.3.0",
+    "postcss-partial-import": "^3.1.1",
+    "postcss-px2rem": "^0.3.0",
+    "postcss-utils": "^1.0.2",
+    "saladcss-bem": "0.0.1"
+  }
+}

@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="pinterest" content="nopin">
+    <meta name="baidu-site-verification" content="ac29c6a8a545e4063535c07baf0f60f1"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="theme-color" content="#263238">
+    <meta name="contact" content="jackliulovelt@outlook.com">
+    <meta name="generator" content="Hugo 0.21"/>
+    <meta name="keywords" content="大刀分享站,大刀分享,大刀,大刀电影,,大刀教程，刀刀狗, dddog ,资源共享，教程分享"/>
+    <meta name="description"
+          content="大刀分享站，这是一个集分享资源，分享教程，分享文章为一体的网站，聚集最新资源，最牛X的技术，最真实的情感。热爱分享，热爱 coding，坚信 coding 改变世界。">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="http://www.dddog.com.cn/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://www.dddog.com.cn/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="http://www.dddog.com.cn/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://www.dddog.com.cn/images/favicon-16x16.png">
+    <link rel="manifest" href="http://www.dddog.com.cn/images/manifest.json">
+    <link rel="mask-icon" href="http://www.dddog.com.cn/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="http://www.dddog.com.cn/images/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.dddog.com.cn/index.xml">
+    <link href="http://www.dddog.com.cn/index.xml" rel="alternate feed" type="application/rss+xml"
+          title="大刀分享站-dddog.com.cn"/>
+    <link rel="canonical" href="http://www.dddog.com.cn/">
+
+    <title>大刀分享站-dddog.com.cn</title>
+    <link rel="stylesheet" href='http://www.dddog.com.cn/css/index.css'>
+    <style>
+        html {
+            font-size: 18px;
+            background-color: rgba(236, 239, 241, .5);
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 15px;
+            }
+        }
+
+        body {
+            color: #333;
+            font-family: 'Roboto Slab', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
+            font-feature-settings: "palt";
+            font-size: inherit;
+            line-height: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1rem;
+            margin: 0;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px dashed #cfd8dc;
+            margin: 1rem 0;
+        }
+
+        p {
+            margin: 0;
+            line-height: 1rem;
+        }
+
+        .text > p {
+            margin: 0 0 0.6rem;
+            font-size: 0.75rem;
+            line-height: 1rem;
+        }
+
+        .text > p.sec {
+            color: #606060;
+            text-indent: 1.2rem;
+            line-height: 1.2rem;
+        }
+
+        a {
+            color: #2196f3;
+            text-decoration: none;
+            transition-duration: .3s;
+        }
+
+        ul, ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            font-size: .8rem;
+            padding: .5rem;
+        }
+
+        tr {
+            /*border-bottom: 1px dashed #ddd;*/
+        }
+
+        /* Layouts */
+        main,
+        aside {
+            display: block;
+        }
+
+        main {
+            padding: 1rem 0 3rem 0;
+        }
+
+        aside.h {
+            padding: 3rem 0;
+        }
+
+        main.f,
+        aside.f {
+            background-color: #333;
+            border-top: 2px dashed #fff;
+            border-bottom: 2px dashed #fff;
+        }
+
+        .l-container {
+            position: relative;
+            max-width: 68rem;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .l-container.thin {
+            max-width: 44rem;
+        }
+
+        .l-header {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px rgba(63, 63, 68, .05), 0 1px 3px rgba(63, 63, 68, .1), 0 1px 2px rgba(0, 0, 0, .05);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .l-footer {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px rgba(63, 63, 68, .05), 0 1px 3px rgba(63, 63, 68, .1), 0 1px 2px rgba(0, 0, 0, .05);
+            font-size: .6rem;
+            font-weight: 700;
+            padding: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .l-sidebar {
+                margin-top: 4rem;
+            }
+        }
+
+        .mrow {
+            margin: 0 -1rem;
+            overflow: hidden;
+        }
+
+        .mcol {
+            box-sizing: border-box;
+            float: left;
+            padding: 0 1rem;
+        }
+
+        .c6 {
+            width: 50%;
+        }
+
+        .c4 {
+            width: 33.26323833%;
+        }
+
+        .c8 {
+            width: 66.66666%;
+        }
+
+        @media (max-width: 768px) {
+            .mcol {
+                width: 100%;
+                float: none;
+            }
+        }
+
+        .logo a {
+            font-size: 1.4rem;
+            line-height: 1.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .articles {
+            margin: -1rem 0;
+            margin-bottom: 1rem;
+        }
+
+        .articles.sm {
+            margin: -.5rem 0;
+            margin-bottom: 0;
+        }
+
+        article {
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        article.li {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px rgba(63, 63, 68, .05), 0 1px 3px rgba(63, 63, 68, .1), 0 1px 2px rgba(0, 0, 0, .05);
+            height: 20rem;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        article.li > a {
+            display: block;
+            color: #333;
+        }
+
+        article.li .inner {
+            padding: 1rem;
+        }
+
+        article.li .thumb {
+            height: 8rem;
+        }
+
+        article.li .title {
+            color: #333;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            margin-bottom: .5rem;
+        }
+
+        article.li .summary {
+            font-size: .8rem;
+            height: 6rem;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        article.lism {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px rgba(63, 63, 68, .05), 0 1px 3px rgba(63, 63, 68, .1), 0 1px 2px rgba(0, 0, 0, .05);
+            margin: .5rem 0;
+        }
+
+        article.lism::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        article.lism > a {
+            display: block;
+            color: #333;
+        }
+
+        article.lism .inner {
+            display: table-cell;
+            vertical-align: middle;
+            height: 5rem;
+            padding-left: .5rem;
+        }
+
+        article.lism .thumb {
+            width: 5rem;
+            height: 5rem;
+            float: left;
+        }
+
+        article.lism .title {
+            font-weight: 700;
+            line-height: 1.25rem;
+            margin-bottom: .25rem;
+        }
+
+        article.sn {
+            background-color: #fff;
+            box-shadow: 0 0 0 1px rgba(63, 63, 68, .05), 0 1px 3px rgba(63, 63, 68, .1), 0 1px 2px rgba(0, 0, 0, .05);
+            margin-bottom: 1rem;
+        }
+
+        article.sn .thumb {
+            height: 20rem;
+        }
+
+        @media (max-width: 768px) {
+            article.sn .thumb {
+                height: 10rem;
+            }
+        }
+
+        article.sn > .article-header,
+        article.sn > .article-body,
+        article.sn .article-footer {
+            padding: 2rem;
+        }
+
+        article.sn > .article-body {
+            padding: 0 2rem;
+        }
+
+        @media (max-width: 768px) {
+            article.sn > .article-header,
+            article.sn > .article-body,
+            article.sn .article-footer {
+                padding: 1rem;
+            }
+
+            article.sn > .article-body {
+                padding: 0 1rem;
+            }
+        }
+
+        article.sn > .article-header .title {
+            font-size: 1.8rem;
+            line-height: 2rem;
+            margin-bottom: .5rem;
+        }
+
+        @media (max-width: 768px) {
+            article.sn > .article-header .title {
+                font-size: 1.4rem;
+                line-height: 1.5rem;
+            }
+        }
+
+        article.sn > .article-header .facts {
+            margin-bottom: 1rem;
+        }
+
+        article.sn > .article-body {
+            margin-bottom: 1.5rem;
+        }
+
+        article.sn > .article-body h2 {
+            border-bottom: .25rem solid #333;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            margin: 1.5rem 0;
+            padding: .5rem 0;
+        }
+
+        article.sn > .article-body h3 {
+            border-left: .5rem solid #333;
+            line-height: 1.5rem;
+            margin: 1.5rem 0;
+            padding: .125rem .5rem;
+        }
+
+        article.sn > .article-body ul,
+        article.sn > .article-body ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        article.sn > .article-body li {
+            padding-bottom: .5rem;
+            line-height: 1.5rem;
+        }
+
+        article.sn > .article-body li:last-child {
+            padding-bottom: 0;
+        }
+
+        article.sn > .article-body p {
+            margin: 1rem 0;
+            line-height: 1.5rem;
+        }
+
+        article.sn > .article-body strong,
+        article.sn > .article-body em {
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        article.sn > .article-body strong {
+            box-shadow: 0 -.5rem 0 0 #ffc107 inset;
+        }
+
+        article.sn > .article-body em {
+            color: #8bc34a;
+        }
+
+        article.sn > .article-body code,
+        article.sn > .article-body pre {
+            font-family: Menlo, Consolas, monospace;
+            font-size: .85rem;
+        }
+
+        article.sn > .article-body pre {
+            background-color: rgb(240, 240, 240);
+            /*color: #fff;*/
+            line-height: 1rem;
+            margin: 1.5rem -2rem;
+            overflow: auto;
+        }
+
+        @media (max-width: 768px) {
+            article.sn > .article-body pre {
+                margin: 1.5rem -1rem;
+            }
+        }
+
+        article.sn > .article-body pre > code {
+            display: block;
+            padding: 1rem 2rem;
+        }
+
+        @media (max-width: 768px) {
+            article.sn > .article-body pre > code {
+                padding: 1rem;
+            }
+        }
+
+        article.sn > .article-body p code {
+            background-color: #eceff1;
+            color: #333;
+            border-radius: 4px;
+            margin: 0 .25rem;
+            padding: .375rem;
+            white-space: nowrap;
+        }
+
+        article.sn > .article-body blockquote {
+            position: relative;
+            border-left: .25rem solid #333;
+            font-size: .8rem;
+            padding: .125rem 1rem;
+            margin: 1.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            article.sn > .article-body blockquote {
+                font-size: 1rem;
+            }
+        }
+
+        article.sn > .article-body blockquote p {
+            margin: .5rem 0;
+            line-height: 1rem;
+        }
+
+        article.sn > .article-body figure {
+            margin: 1.5rem 0;
+        }
+
+        article.sn > .article-body figure img,
+        article.sn > .article-body figure amp-img {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            max-width: 100%;
+        }
+
+        article.sn > .article-body figcaption {
+            color: #cfd8dc;
+            font-size: .8rem;
+            font-weight: 700;
+            margin-top: .5rem;
+        }
+
+        .facts li {
+            display: inline;
+            font-size: .8rem;
+            margin-right: 1rem;
+        }
+
+        .facts i {
+            color: #cfd8dc;
+            margin-right: .5em;
+        }
+
+        .facts.sm li {
+            font-size: .7rem;
+        }
+
+        .sections.sidebar {
+            margin: -1rem 0;
+        }
+
+        .sections.footer {
+            margin: -1rem 0;
+        }
+
+        section.sidebar {
+            margin: 2rem 0;
+        }
+
+        section.sidebar > header {
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        section.footer {
+            margin: 1rem 0;
+        }
+
+        section.footer > header {
+            font-size: .8rem;
+            margin: .5rem 0;
+        }
+
+        section.footer > header::before {
+            content: "- ";
+        }
+
+        section.footer > header a {
+            font-weight: 700;
+            color: #333;
+            text-decoration: underline;
+        }
+
+        .terms {
+            margin: -.25rem;
+        }
+
+        .terms li {
+            display: inline-block;
+        }
+
+        .terms a {
+            display: block;
+            float: left;
+            background-color: #333;
+            border-radius: 4px;
+            color: #fff;
+            font-size: .7rem;
+            margin: .25rem;
+            padding: 0 .75rem;
+            line-height: 1.75rem;
+        }
+
+        .paging {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .paging a {
+            display: inline-block;
+            background-color: #fff;
+            box-shadow: 0 0 0 1px rgba(63, 63, 68, .05), 0 1px 3px rgba(63, 63, 68, .1), 0 1px 2px rgba(0, 0, 0, .05);
+            border-radius: 4px;
+            color: #333;
+            padding: 0 1rem;
+            line-height: 3rem;
+        }
+
+        .page-title {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .page-title::after {
+            content: '';
+            display: block;
+            border-bottom: .25rem solid #333;
+            width: 3rem;
+            margin: 1.5rem auto;
+        }
+
+        .page-title > .title {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+
+        /* Parts:breadcrumb */
+        .crumb ol {
+            text-overflow: ellipsis;
+            color: #cfd8dc;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .crumb li {
+            display: inline;
+            font-size: .8rem;
+        }
+
+        .crumb li::after {
+            content: '›';
+            margin: 0 .25rem 0 .5rem;
+        }
+
+        .crumb li:last-child::after {
+            content: '';
+        }
+
+        .crumb a {
+            color: #cfd8dc;
+        }
+
+        .crumb i {
+            margin-right: .5em;
+        }
+
+        .share {
+            padding: 0;
+        }
+
+        .share a {
+            display: inline-block;
+            box-shadow: 0 0 0 1px rgba(63, 63, 68, .05), 0 1px 3px rgba(63, 63, 68, .1), 0 1px 2px rgba(0, 0, 0, .05);
+            min-width: 1rem;
+            height: 2rem;
+            border-radius: 4px;
+            color: #333;
+            font-size: .8rem;
+            font-weight: 700;
+            line-height: 2rem;
+            text-align: center;
+            padding: 0 .5rem;
+        }
+
+        .adj article.lism {
+            margin-bottom: 1rem;
+        }
+
+        .adj header {
+            font-weight: 700;
+            font-size: .8rem;
+        }
+
+        .toc {
+            padding: 0 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .toc {
+                padding: 0 1rem;
+            }
+        }
+
+        .toc {
+            margin: 1rem 0;
+        }
+
+        .toc nav > ul {
+            background-color: #eceff1;
+            border-radius: 4px;
+            display: inline-block;
+            font-size: .8rem;
+            padding: .5rem 1rem;
+            word-break: break-all;
+            list-style: none;
+        }
+
+        .toc ul {
+            padding: 0;
+        }
+
+        .toc ul ul {
+            padding-left: 1rem;
+        }
+
+        .toc ul ul ul {
+            padding-left: 1rem;
+        }
+
+        .toc li {
+            color: #90a4ae;
+        }
+
+        .toc ul ul > li {
+            font-weight: 700;
+            margin: .5rem 0;
+            list-style-type: decimal;
+        }
+
+        .toc ul ul ul > li {
+            list-style-type: disc;
+            font-weight: 500;
+        }
+
+        .thumb {
+            background-image: url(http://www.dddog.com.cn/images/default.jpg);
+            background-size: cover;
+        }
+
+        .thumb-cf8300cadebc912c0e5eb9257aef3f81 {
+            background-image: url(http://oqzceoiaz.bkt.clouddn.com/u=97831068,3938811824&fm=21&gp=0.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        .thumb-bcd139916da15cec79acb6a1ce606dce {
+            background-image: url(//oqzceoiaz.bkt.clouddn.com/IMGP0171.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        .thumb-738c3283fa5f321ae057bafcbc2a9916 {
+            background-image: url(//orbr3yvrc.bkt.clouddn.com/game-wallpaper-1-thumbnail2.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        .thumb-0c5bc78bef73a703f76224f5e7573ada {
+            background-image: url(//orbr3yvrc.bkt.clouddn.com/50862544_p0.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        .thumb-1a35c09b37c22ae029da5f2fdad81110 {
+            background-image: url(//orbr3yvrc.bkt.clouddn.com/50862544_p0.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        .thumb-fdab051b447e3c70be4748f6f1c2ae26 {
+            background-image: url(//orbr3yvrc.bkt.clouddn.com/50862544_p0.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        .thumb-7781b91b918917ee0a26d6f8259cd08f {
+            background-image: url(//orbr3yvrc.bkt.clouddn.com/50862544_p0.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        .thumb-4528b7f3228cc5cdadc9e2e0212c6881 {
+            background-image: url(//orbr3yvrc.bkt.clouddn.com/50862544_p0.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        .thumb-08b0e37569cb1953e8bdfb96eea60b04 {
+            background-image: url(//orbr3yvrc.bkt.clouddn.com/50862544_p0.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        .thumb-b792585504de5838d86c1ef7b768f3cc {
+            background-image: url(//orbr3yvrc.bkt.clouddn.com/50862544_p0.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        .thumb-747b47b675ac1d13002bdc5b306e4c92 {
+            background-image: url(//orbr3yvrc.bkt.clouddn.com/50862544_p0.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        .thumb-47e82e8b490ba1eb739f7342940cd0f4 {
+            background-image: url(//orbr3yvrc.bkt.clouddn.com/50862544_p0.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        .thumb-6ce66fe53d1a8aa18146138755532559 {
+            background-image: url(//orbr3yvrc.bkt.clouddn.com/50862544_p0.jpg?imageView2/0/format/jpg/interlace/1/q/75|imageslim);
+        }
+
+        /*
+         highlight.js style for Microtik RouterOS script
+        */
+        .hljs {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #F0F0F0;
+        }
+
+        /* Base color: saturation 0; */
+        .hljs,
+        .hljs-subst {
+            color: #7a9180;
+        }
+
+        .hljs-comment {
+            color: #888888;
+        }
+
+        .hljs-keyword,
+        .hljs-selector-tag,
+        .hljs-meta-keyword,
+        .hljs-doctag,
+        .hljs-name {
+            font-weight: bold;
+            color: rgb(217, 39, 49);
+        }
+
+        .hljs-attribute {
+            color: #0E9A00;
+        }
+
+        .hljs-function {
+            color: #99069A;
+        }
+
+        .hljs-builtin-name {
+            color: #99069A;
+        }
+
+        /* User color: hue: 0 */
+        .hljs-type,
+        .hljs-string,
+        .hljs-number,
+        .hljs-selector-id,
+        .hljs-selector-class,
+        .hljs-quote,
+        .hljs-template-tag,
+        .hljs-deletion {
+            color: #880000;
+        }
+
+        .hljs-title,
+        .hljs-section {
+            color: rgb(166, 226, 46);
+            font-weight: bold;
+        }
+
+        .hljs-regexp,
+        .hljs-symbol,
+        .hljs-variable,
+        .hljs-template-variable,
+        .hljs-link,
+        .hljs-selector-attr,
+        .hljs-selector-pseudo {
+            color: #BC6060;
+        }
+
+        /* Language color: hue: 90; */
+        .hljs-literal {
+            color: #78A960;
+        }
+
+        .hljs-built_in,
+        .hljs-bullet,
+        .hljs-code,
+        .hljs-addition {
+            color: #0C9A9A;
+        }
+
+        /* Meta color: hue: 200 */
+        .hljs-meta {
+            color: #1f7199;
+        }
+
+        .hljs-meta-string {
+            color: #4d99bf;
+        }
+
+        /* Misc effects */
+        .hljs-emphasis {
+            font-style: italic;
+        }
+
+        .hljs-strong {
+            font-weight: bold;
+        }
+
+        .hljs-javadoc {
+            color: rgb(117, 113, 94);
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?69e96b4c940be47bc9d8405ac52a6232";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+
+<header class="l-header">
+    <div class="l-container">
+        <div class="logo">
+            <a href="http://www.dddog.com.cn/">大刀分享站-dddog.com.cn</a>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="l-container">
+        <div class="discliamer">
+            <h1 class="text-center">免责声明</h1>
+            <div class="text">
+                <p>1.免责声明</p>
+                <p class="sec">
+                    本网站所载的所有资料、商标、标志、图像、短片、声音档案、链接及其他资料等（以下简称「资料」），只供参考之用，本站将会随时更改资料，并不作另行通知。虽然本站已尽力确保本网页的资料准确性，但本站不会明示或隐含保证该等资料均为准确无误。本站不会对任何错误或遗漏承担责任。本站不会对使用或任何人士使用本网页而引致任何损害（包括但不限于电脑病毒、系统固障、资料损失）承担任何赔偿。本站可能会链接至其他机构所提供的网页，但这些网页并不是由本站所控制。本站不会对这些网页所显示的内容作出任何保证或承担任何责任。</p>
+                <p>2. 版权声明</p>
+                <p class="sec">
+                    本网站的内容来自互联网，由本站整理分享，均受知识产权法例及权利（包括但不限于保护版权的法例）所保障。本站文章均为用户编辑分享，对文章内容的非法解读概不负责。本站所有文章均可分享，分享请注明出处。任何单位或个人认为本站内容可能涉及侵犯其信息网络传播权，应该及时联系我们，并提供相应证明，本站会尽快依法处理。
+                </p>
+                <p>3. 责任限制</p>
+                <p class="sec">
+                    在任何情况下，本站并不须就任何人士由于直接或间接进入或使用本网站，并就此内容上任何信息，而招致的任何损失或损害负上任何责任（不论基于合约、侵权行为（包括疏忽）或其他方面的）。在不限制以上条文的一般性之原则及任何情况下，本站并不须就您进入或使用本网站的任何附带引起、特殊或相应而生之任何种类的损害作出赔偿，包括但不限于利润损失或其他经济损失、人身伤害或死亡。
+                </p>
+                <p>4. 免责声明更新</p>
+                <p class="sec">
+                    在给予或不给予事先通知下，本站保留随时更新本免责声明的权利，任何更改于本网站发布时，立即生效。请您在每次浏览本网站时，务必查看此免责声明。如您继续使用本网站，即代表您同意接受更改后的免责声明约束。
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="l-footer">
+    <div class="l-container">
+        <p><a href="http://www.dddog.com.cn/index.xml" type="application/rss+xml" target="_blank">RSS</a> / <a
+                href="http://www.dddog.com.cn/sitemap.xml" type="application/xml" target="_blank">站点地图</a> / <a
+                href="http://www.dddog.com.cn/xml/disclaimer.html">免责声明</a></p>
+        <aside>
+            <p>© 2016-2017 dddog.com.cn&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/"
+                                                      target="_blank">湘ICP备16020843号</a></p>
+            <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>. <a
+                    href="https://github.com/dim0627/hugo_theme_robust" target="_blank">Robust</a> designed by <a
+                    href="http://yet.unresolved.xyz/" target="_blank">Daisuke Tsuji</a>, modified by <a
+                    href="https://github.com/Jackliu007888" target="_blank">JackLiu</a> &amp; <a
+                    href="https://github.com/MIKUScallion" target="_blank">MIKUScallion</a></p>
+        </aside>
+    </div>
+</footer>
+
+<script>
+    ;(function () {
+        var line = 2;
+        var textOverflow = 'ellipsis'
+        var list = document.querySelectorAll('article.li .title, article.lism .title')
+        for (var i = 0; i < list.length; i++) {
+            var item = list[i]
+            lineLimit(item, 2, textOverflow)
+        }
+        function lineLimit(dom, line, textOverflow) {
+            var p = dom
+            var c = p.children[0];
+            var lineHeight = c.offsetHeight / c.getClientRects().length
+            var count = 0
+            var cut = ''
+            var backup = c.innerText
+            while (c.getClientRects().length > line) {
+                c.innerText = c.innerText.substring(0, c.innerText.length - 1)
+                count++
+            }
+            if (textOverflow === 'ellipsis' && count != 0) {
+                c.innerText = c.innerText.substring(0, c.innerText.length - 1)
+                count++
+                c.innerText = c.innerText + '...'
+            }
+            cut = backup.substring(backup.length - count, backup.length)
+            return cut
+        }
+    })();
+</script>
+<script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script>
+</body>
+</html>

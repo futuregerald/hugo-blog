@@ -1,0 +1,98 @@
+.l-footer {
+  text-align: center;
+}
+
+.svg-icon {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center
+}
+
+.svg-icon::before {
+  display: inline-block;
+  content: "＊";
+  opacity: 0;
+}
+
+.svg-icon-fish {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' fill='%23cfd8dc'%3E %3Cpath d='M503.227 25.256a23.277 23.277 0 0 0-16.482-16.48A259.607 259.607 0 0 0 419.791 0C350.702 0 285.751 26.902 236.9 75.75c-32.673 32.675-56.019 73.474-67.514 117.987-8.653 33.51-10.446 68.468-5.454 102.585H23.276a23.274 23.274 0 0 0-16.455 39.73l169.137 169.132a23.265 23.265 0 0 0 25.361 5.045 23.275 23.275 0 0 0 14.367-21.501l.002-140.651c12.459 1.826 25.052 2.78 37.682 2.78h.002c69.08 0 134.035-26.905 182.88-75.753 11.326-11.326 21.501-23.648 30.481-36.741.56-.717 1.064-1.46 1.53-2.222 16.162-24.104 28.22-50.814 35.506-79.022 11.151-43.182 10.964-88.778-.542-131.863zM169.14 432.542l-89.678-89.674h89.679l-.001 89.674zm234.199-190.35c-40.057 40.057-93.319 62.118-149.969 62.118a213.293 213.293 0 0 1-41.579-4.09c-13.715-69.108 7.893-141.425 58.024-191.556a215.564 215.564 0 0 1 15.886-14.381l131.987 131.989a210.972 210.972 0 0 1-14.349 15.92zm40.069-56.026L325.693 68.45c28.888-14.324 60.909-21.904 94.098-21.904 13.979 0 27.91 1.373 41.576 4.088 9.185 46.285 2.502 93.998-17.959 135.532z'/%3E %3C/svg%3E");
+}
+
+.svg-icon-bookmark {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' fill='%23cfd8dc'%3E %3Cpath d='M734.701616 65.034179H288.373315c-49.118698 0-88.864934 44.638663-88.864934 99.217722l-0.435928 793.579074 312.474734-148.784628 312.475757 148.784628V164.251901c0.001023-54.579059-40.191374-99.217722-89.321328-99.217722zM268.995989 844.887646l11.187806-4.330632-11.18883 5.329379 0.001024-0.998747z'/%3E %3C/svg%3E");
+}
+
+.svg-icon-calendar {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' fill='%23cfd8dc'%3E %3Cpath d='M137.972 933.787c-41.151 0-74.638-33.488-74.638-74.63V237.171c0-41.142 33.488-74.63 74.638-74.63h74.642v66.329h-82.931v638.589h762.966V228.87h-140.98v82.931H685.32V79.61h66.349v82.931h132.686c41.151 0 74.642 33.488 74.642 74.63v621.986c0 41.142-33.492 74.63-74.642 74.63H137.972zM270.662 311.801V79.61h66.349v82.931h290.261v66.329H337.011v82.931zM229.196 411.335h149.281v149.26H229.196zM436.525 411.335h149.282v149.26H436.525zM643.854 411.335h149.281v149.26H643.854zM229.196 618.664h149.281v149.26H229.196zM436.525 618.664h149.282v149.26H436.525z'/%3E %3C/svg%3E");
+}
+
+.svg-icon-editor {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' fill='%23cfd8dc'%3E %3Cpath d='M537.6 293.12l-391.04 374.4-51.84 270.72 271.36-51.84 374.4-390.4z'/%3E %3Cpath d='M810.88 403.84l79.36-82.56c52.48-54.4 51.2-140.8-1.92-194.56-53.76-53.76-140.16-54.4-194.56-1.92L611.2 203.52l199.68 200.32z'/%3E %3C/svg%3E");
+}
+
+
+.share .share-baidu a {
+  transition-property: none;
+  height: 16px;
+  color: #333;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 6px 6px 6px 0;
+}
+
+.article-body {
+  font-family: serif;
+}
+
+.articles article.li > a {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+}
+
+article.li .thumb.thumb-large {
+  height: 208px;
+  height: 13rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+article.li {
+  overflow: scroll;
+}
+
+article.li > a {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  overflow: scroll;
+}
+
+article.lism .inner {
+  padding-right: 8px;
+  padding-right: .5rem;
+}
+
+article img {
+  max-width: 100%;
+}
+
+article.li .title, article.lism .title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

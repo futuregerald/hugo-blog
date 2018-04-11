@@ -1,0 +1,37 @@
+defaultContentLanguage = "zh-cn"
+baseURL = "https://www.dddog.com.cn/"
+theme = "hugo_theme_robust"
+copyright = "© 2016-2017 dddog.com.cn"
+enableMissingTranslationPlaceholders = true
+
+# [author]
+#     name = "JackLiu, MIKUScallion"
+#     email = "jackliulovelt@outlook.com, MIKUScallion@icloud.com"
+
+[taxonomies]
+catalogues = "catalogues"
+series = "series"
+tag = "tags"
+
+
+[Languages]
+[Languages.zh-cn]
+languageCode = "zh-cn"
+title = "大刀分享站-dddog.com.cn"
+ICP = "湘ICP备16020843号"
+enableEmoji = true
+hasCJKLanguage = true
+disabledGooglefonts = true
+disabledFontAwesome = true
+disableSummary = true
+baiduShare = true
+baiduAnalytics = true
+contact = "jackliulovelt@outlook.com"
+indexDescription = "大刀分享站，这是一个集分享资源，分享教程，分享文章为一体的网站，聚集最新资源，最牛X的技术，最真实的情感。热爱分享，热爱 coding，坚信 coding 改变世界。"
+fontfamily = "'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei','微软雅黑',Arial,sans-serif"
+cndForHighlight = "https://www.dddog.com.cn/js/highlight.min.js"
+#cndForHighlightTheme = "http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/arta.min.css"
+cndForHighlightTheme = ""
+# [Languages.en]
+# languageCode = "en"
+# title = "Knife Knife Share Site"

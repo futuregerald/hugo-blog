@@ -1,0 +1,38 @@
+[latest]
+other = "最近更新"
+[prev]
+other = "上一页"
+[next]
+other = "下一页"
+[previous_article]
+other = "上一篇文章"
+[next_article]
+other = "下一篇文章"
+[word]
+other = "字"
+[draft]
+other = "草稿"
+[date]
+other = "2006-01-02"
+[top]
+other = "首页"
+[catalogues]
+other = "目录"
+[series]
+other = "系列"
+[tags]
+other = "标签"
+[post]
+other = "资源"
+[essay]
+other = "随笔"
+[tutorial]
+other = "教程"
+[recent_content]
+other = "最近的内容"
+[in]
+other = "在"
+[on]
+other = "在"
+[sitemap]
+other = "站点地图"

@@ -1,0 +1,50 @@
+[latest]
+other = "latest"
+[prev]
+other = "prev"
+[next]
+other = "next"
+[previous_article]
+other = "Previous Article"
+[next_article]
+other = "Next Article"
+[word]
+other = "Word"
+[draft]
+other = "draft"
+[date]
+other = "Jan 2, 2006"
+[top]
+other = "top"
+[catalogues]
+other = "catalogues"
+[series]
+other = "series"
+[tags]
+other = "tags"
+[post]
+other = "post"
+[essay]
+other = "essay"
+[tutorial]
+other = "tutorial"
+[twitter_share]
+other = "Twitter Share"
+[facebook_share]
+other = "Facebook Share"
+[google_plus_share]
+other = "Google Plus Share"
+[line_share]
+other = "LINE Share"
+[pocket_save]
+other = "Pocket Save"
+[hatena_book_mark]
+other = "Hatena Book Mark"
+[recent_content]
+other = "Recent Content"
+[in]
+other = "in"
+[on]
+other = "on"
+[sitemap]
+other = "Sitemap"

@@ -1,0 +1,73 @@
+<article class="sn">
+
+  <div class="thumb thumb-{{ .UniqueID }}"></div>
+
+  <header class="article-header">
+    <h1 class="title">{{ .Title }}</h1>
+
+    <ul class="facts" id="auPa">
+      {{ with .Params.author }}
+      <li id="author"><i class="svg-icon svg-icon-editor" aria-hidden="true"></i>{{ . }}</li>
+      {{ end }}
+      <li><i class="svg-icon svg-icon-calendar" aria-hidden="true"></i><time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05JST" }}">{{ .Lastmod.Format ( .Site.Params.dateformat | default ( i18n "date")) }}</time></li>
+      {{ with .Section }}<li><i class="svg-icon svg-icon-bookmark" aria-hidden="true"></i><a href="{{ $.Site.BaseURL }}{{ . | urlize }}/">{{ i18n . | upper }}</a></li>{{ end }}
+      {{ if eq (getenv "HUGO_ENV") "DEV" }}
+      <li>{{ .WordCount }} {{ i18n "word" }}</li>
+      {{ if .IsDraft }}<li style="color: #2196f3;">{{ i18n "draft" | upper }}</li>{{ end }}
+      {{ end }}
+    </ul>
+
+    <!--{{ partial "share.html" . }}-->
+
+  </header>
+
+  {{ if .Params.toc }}
+  <div class="toc">
+    {{ .TableOfContents }}
+  </div>
+  {{ end }}
+
+  <div class="article-body">{{ .Content }}</div>
+
+  <footer class="article-footer">
+
+    {{ partial "award.html" . }}
+    <!-- <div id="comments"></div> -->
+    <!-- {{ partial "login.html" . }} -->
+    {{ partial "share.html" . }}
+
+    <section class="footer">
+      <div>
+        <nav class="crumb">
+          <ol>
+            <li><a href="{{ .Site.BaseURL }}"><i class="svg-icon svg-icon-home" aria-hidden="true"></i>{{ i18n "top" | upper }}</a></li>
+            {{ with .Section }}
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="{{ $.Site.BaseURL }}{{ . | urlize }}/" itemprop="url"><span itemprop="title">{{ i18n . | upper }}</span></a></li>
+            {{ end }}
+            <li class="active">{{ .Title }}</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    {{ $params := .Params }}
+    {{ range $key, $value := $.Site.Taxonomies }}
+    {{ if isset $params $key }}
+
+    <section class="footer">
+      <header>
+        <a href="{{ $.Site.BaseURL }}{{ $key | urlize }}/">{{ i18n $key | upper }}</a>
+      </header>
+      <div>
+        <ul class="terms">
+          {{ range (index $params $key) }}
+          <li><a href="{{ $.Site.BaseURL }}{{ $key | urlize }}/{{ . | urlize }}/">{{ . }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </section>
+    {{ end }}
+    {{ end }}
+  </footer>
+
+</article>

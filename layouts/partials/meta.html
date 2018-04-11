@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<!--<meta property="wb:webmaster" content="7c240f1880fd7f46" />-->
+<!--<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=1829693345&debug=true" type="text/javascript" charset="utf-8"></script>-->
+<meta name="baidu-site-verification" content="sekLJtkbCl" />
+<meta name="baidu-site-verification" content="ac29c6a8a545e4063535c07baf0f60f1"/>
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="theme-color" content="#263238">
+{{ with .Site.Params.contact }}<meta name="contact" content="{{ . }}">{{ end }}
+{{ .Hugo.Generator }}
+{{ if .IsHome  }}
+    <meta name="keywords" content="大刀分享站,大刀分享,大刀,大刀电影,,大刀教程，刀刀狗, dddog ,资源共享，教程分享"/>
+    {{ with .Site.Params.indexDescription }}
+        <meta name="description" content="{{ . }}">
+    {{ end }}
+{{ end }}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ .Site.BaseURL }}images/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}images/favicon-16x16.png">
+<link rel="manifest" href="{{ .Site.BaseURL }}images/manifest.json">
+<link rel="mask-icon" href="{{ .Site.BaseURL }}images/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-TileImage" content="{{ .Site.BaseURL }}images/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!--<link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.ico">-->
+<!--<link rel="apple-touch-icon" href="{{ .Site.BaseURL }}images/logo.png">-->
+{{ with .RSSLink }}<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ . }}">{{ end }}
+{{ if .RSSLink }}
+<link href="{{ .RSSLink }}" rel="alternate feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+

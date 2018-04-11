@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html ⚡>
+  <head>
+    {{ partial "meta.html" . }}
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    {{ with .Site.Params.disabledGooglefonts }}
+    {{ else }}
+      {{ with .Site.Params.googlefonts }}
+      <link href="{{ . }}" rel="stylesheet">
+      {{ else }}
+      <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+      {{ end }}
+    {{ end }}
+
+    {{ with .Site.Params.disabledFontAwesome }}
+    {{ else }}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    {{ end }}
+
+    <title>{{ block "title" . }}{{ end }}{{ .Site.Title }}</title>
+    {{ block "meta" . }}{{ end }}
+
+    <link rel="stylesheet" href='{{ $.Site.BaseURL }}css/index.css'>
+    <style amp-custom>
+      {{ replaceRE " +" " " (replaceRE "\n" "" (partial "styles.css" .)) | safeCSS }}
+      {{ with .Site.Params.fontfamily }} body { font-family: {{ . | safeCSS }}; } {{ end }}
+      {{ with .Site.Params.logofontfamily }} .h-logo { font-family: {{ . | safeCSS }}; } {{ end }}
+      .l-container { max-width: 40rem; margin: 0 auto; }
+    </style>
+  </head>
+
+  <body>
+    {{ if ne (getenv "HUGO_ENV") "DEV" }}
+    <amp-analytics type="googleanalytics" id="analytics1">
+      <script type="application/json"> { "vars": { "account": {{ .Site.GoogleAnalytics }}}, "triggers": { "trackPageview": { "on": "visible", "request": "pageview" } } }
+      </script>
+    </amp-analytics>
+    {{ end }}
+
+    <header class="l-header">
+      <div class="l-container">
+        <div class="logo">
+          <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="l-container">
+        {{ block "main" . }}{{ end }}
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-container">
+        <p><a href="{{ $.Site.BaseURL }}index.xml" type="application/rss+xml" target="_blank">RSS</a> / <a href="{{ $.Site.BaseURL }}sitemap.xml" type="application/xml" target="_blank">{{ i18n "sitemap" }}</a> <a href="{{ $.Site.BaseURL }}sitemap.xml">免责声明</a> </p>
+        <aside>
+          <p>{{ with .Site.Copyright }}{{ . | safeHTML }}{{ else }}<span class="h-logo">&copy; {{ .Site.Title }}</span>{{ end }}{{ with .Site.Params.ICP }}&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/" target="_blank">{{ . }}</a>{{ end }}</p>
+          <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>. <a href="https://github.com/dim0627/hugo_theme_robust" target="_blank">Robust</a> designed by <a href="http://yet.unresolved.xyz/" target="_blank">Daisuke Tsuji</a>, modified by <a href="https://github.com/Jackliu007888" target="_blank">JackLiu</a> &amp; <a href="https://github.com/MIKUScallion" target="_blank">MIKUScallion</a></p>
+        </aside>
+      </div>
+    </footer>
+    <script>
+    ;(function () {
+      var line = 2;
+      var textOverflow = 'ellipsis'
+      var list = document.querySelectorAll('article.li .title, article.lism .title')
+      for (var i = 0; i < list.length; i++) {
+        var item = list[i]
+        lineLimit(item, 2, textOverflow)
+      }
+      function lineLimit (dom, line, textOverflow) {
+        // TODO: add some check
+        var p = dom
+        var c = p.children[0];
+        var lineHeight = c.offsetHeight / c.getClientRects().length
+        var count = 0
+        var cut = ''
+        var backup = c.innerText
+
+        while (c.getClientRects().length > line) {
+          c.innerText = c.innerText.substring(0, c.innerText.length - 1)
+          count++
+        }
+
+        if (textOverflow === 'ellipsis' && count != 0) {
+          c.innerText = c.innerText.substring(0, c.innerText.length - 1)
+          count++
+          c.innerText = c.innerText + '...'
+        }
+
+        cut = backup.substring(backup.length - count, backup.length)
+
+        return cut
+      }
+    })();
+    </script>
+    {{ if ne (getenv "HUGO_ENV") "DEV" }}
+    {{ with  .Site.Params.baiduAnalytics }}
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?69e96b4c940be47bc9d8405ac52a6232";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    {{ end }}
+    {{ end }}
+  </body>
+</html>

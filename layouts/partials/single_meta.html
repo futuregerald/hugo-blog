@@ -1,0 +1,34 @@
+{{ if not .IsHome}}<meta name="description" content="{{ replaceRE "\n" "" (.Description | default .Summary) }}">{{ end }}
+
+<!--<meta name="description" content="{{ if ne .Site.Params.indexDescription ' ' }}{{ .Site.Params.indexDescription }}{{ end }}{{ if ne .Description ' ' }}{{ replaceRE "\n" "" (.Description) }}{{ end }}">-->
+<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+<meta property="og:type" content="{{ i18n .Section }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ with .Params.thumbnail_absolute }}
+  {{ with $.Params.thumbnail }}
+  <meta property="og:image" content="{{ . }}">
+  {{ end }}
+{{ else }}
+  {{ with $.Params.thumbnail }}
+  <meta property="og:image" content="{{ $.Site.BaseURL }}{{ . | default "images/default.png" }}">
+  {{ end }}
+{{ end }}
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:description" content="{{ replaceRE "\n" "" (.Description | default .Summary) }}">
+<meta property="og:locale" content="{{ .Site.LanguageCode }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="{{ .Site.Title }}">
+<meta name="twitter:url" content="{{ .Permalink }}">
+<meta name="twitter:title" content="{{ .Title }} - {{ .Site.Title }}">
+<meta name="twitter:description" content="{{ replaceRE "\n" "" (.Description | default .Summary) }}">
+<!--<meta name="keywords" content="{{ replaceRE "\n" "" (.Keywords | default .Summary) }}"/>-->
+<meta name="keywords" content="{{ delimit .Params.tags ", " }}"/>
+{{ with .Params.thumbnail_absolute }}
+  {{ with $.Params.thumbnail }}
+  <meta property="twitter:image" content="{{ . }}">
+  {{ end }}
+{{ else }}
+  {{ with $.Params.thumbnail }}
+  <meta property="twitter:image" content="{{ $.Site.BaseURL }}{{ . | default "images/default.png" }}">
+  {{ end }}
+{{ end }}

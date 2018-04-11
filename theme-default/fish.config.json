@@ -1,0 +1,8 @@
+{
+  "mode": "dependent",
+  "dependentDistPath": "../static/css",
+  "px2rem": {
+    "enabled": false,
+    "options": {}
+  }
+}

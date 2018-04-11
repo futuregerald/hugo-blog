@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--<html xmlns:wb="http://open.weibo.com/wb">-->
+<html>
+  <head>
+    {{ partial "meta.html" . }}
+
+    {{ with .Site.Params.disabledGooglefonts }}
+    {{ else }}
+      {{ with .Site.Params.googlefonts }}
+      <link href="{{ . }}" rel="stylesheet">
+      {{ else }}
+      <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+      {{ end }}
+    {{ end }}
+
+    {{ with .Site.Params.disabledFontAwesome }}
+    {{ else }}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    {{ end }}
+
+    {{ with .Site.Params.cndForHighlightTheme }}
+      <link rel="stylesheet" href='{{ . }}'>
+    {{ else }}
+      <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">-->
+    {{ end }}
+
+    <title>{{ block "title" . }}{{ end }}{{ .Site.Title }}</title>
+    {{ block "meta" . }}{{ end }}
+
+    <link rel="stylesheet" href='{{ $.Site.BaseURL }}css/index.css'>
+    <style>
+      {{ replaceRE " +" " " (replaceRE "\n" "" (partial "styles.css" .)) | safeCSS }}
+      {{ with .Site.Params.fontfamily }} body { font-family: {{ . | safeCSS }}; } {{ end }}
+      {{ with .Site.Params.logofontfamily }} .h-logo { font-family: {{ . | safeCSS }}; } {{ end }}
+    </style>
+      <!-- <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3793594984" type="text/javascript" charset="UTF-8"></script> -->
+  </head>
+
+  <body>
+    {{ if ne (getenv "HUGO_ENV") "DEV" }}
+    {{ template "_internal/google_analytics.html" . }}
+    {{ end }}
+
+    <header class="l-header">
+      <div class="l-container">
+        <div class="logo">
+            <span class ="dg-logo" style = "vertical-align: sub"><img style="width: 1.5rem;" src="{{ $.Site.BaseURL}}/images/android-chrome-96x96.png" alt=""></span>
+          <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        </div>
+        <!--<div class="weibo-btn" id="wb_connect_btn"></div>-->
+        </div>
+      {{ partial "wilddog_auth.html" . }}
+    </header>
+<!--<script>-->
+    <!--WB2.anyWhere(function(W) {-->
+        <!--W.widget.connectButton({-->
+            <!--id: "wb_connect_btn",-->
+            <!--type: "3,2",-->
+            <!--callback: {-->
+                <!--login: function (o) {	//登录后的回调函数-->
+                    <!--console.log("success")-->
+                <!--},-->
+                <!--logout: function () {	//退出后的回调函数-->
+                    <!--console.log("quit")-->
+                <!--}-->
+            <!--}-->
+        <!--});-->
+    <!--})-->
+<!--</script>-->
+    <main>
+      <div class="l-container">
+        {{ block "main" . }}{{ end }}
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-container">
+        <p><a href="{{ $.Site.BaseURL }}index.xml" type="application/rss+xml" target="_blank">RSS</a> / <a href="{{ $.Site.BaseURL }}sitemap.xml" type="application/xml" target="_blank">{{ i18n "sitemap" }}</a> / <a href="{{ $.Site.BaseURL }}xml/disclaimer.html">免责声明</a></p>
+        <aside>
+          <p>{{ with .Site.Copyright }}{{ . | safeHTML }}{{ else }}<span class="h-logo">&copy; {{ .Site.Title }}</span>{{ end }}{{ with .Site.Params.ICP }}&nbsp;&nbsp;<a href="http://www.miibeian.gov.cn/" target="_blank">{{ . }}</a>{{ end }}</p>
+          <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>. <a href="https://github.com/dim0627/hugo_theme_robust" target="_blank">Robust</a> designed by <a href="http://yet.unresolved.xyz/" target="_blank">Daisuke Tsuji</a>, modified by <a href="https://github.com/Jackliu007888" target="_blank">JackLiu</a> &amp; <a href="https://github.com/MIKUScallion" target="_blank">MIKUScallion</a></p>
+        </aside>
+      </div>
+    </footer>
+
+    {{ with .Site.Params.cndForHighlight }}
+      <script src='{{ . }}'></script>
+    {{ else }}
+      <script src="{{ $.Site.BaseURL }}js/highlight.min.js"></script>
+    {{ end }}
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    ;(function () {
+      var line = 2;
+      var textOverflow = 'ellipsis'
+      var list = document.querySelectorAll('article.li .title, article.lism .title')
+      for (var i = 0; i < list.length; i++) {
+        var item = list[i]
+        lineLimit(item, 2, textOverflow)
+      }
+      function lineLimit (dom, line, textOverflow) {
+        // TODO: add some check
+        var p = dom
+        var c = p.children[0];
+        var lineHeight = c.offsetHeight / c.getClientRects().length
+        var count = 0
+        var cut = ''
+        var backup = c.innerText
+
+        while (c.getClientRects().length > line) {
+          c.innerText = c.innerText.substring(0, c.innerText.length - 1)
+          count++
+        }
+
+        if (textOverflow === 'ellipsis' && count != 0) {
+          c.innerText = c.innerText.substring(0, c.innerText.length - 1)
+          count++
+          c.innerText = c.innerText + '...'
+        }
+
+        cut = backup.substring(backup.length - count, backup.length)
+
+        return cut
+      }
+    })();
+    </script>
+    {{ if ne (getenv "HUGO_ENV") "DEV" }}
+    {{ with  .Site.Params.baiduAnalytics }}
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?69e96b4c940be47bc9d8405ac52a6232";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    {{ end }}
+    {{ end }}
+  </body>
+</html>
